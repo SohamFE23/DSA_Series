@@ -1,9 +1,19 @@
-class palindromex {
-    public int[] twoSum(int[] nums, int target) {
-        for(int i=0;i<nums.length;i++)
-            for(int j=i+1;j<nums.length;j++)
-                if(nums[i]+nums[j]==target)
-                    return new int[]{i,j};  
-        return new int[]{};
+class palindromeex{
+    public static void main(String args[]){
+        int a=121;
+        int lastdeigit=0;
+        int sum=0;       
+        while(a>0){
+            lastdeigit=a%10;
+            sum=sum+lastdeigit;
+            a=a/10;
+        }
+        if(sum==a){
+            System.out.println("The number is palindrome");
+        }
+        else{
+            System.out.println("The number is not palindrome");
+        }
+        
     }
 }
